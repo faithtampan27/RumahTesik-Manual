@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RumahResik</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    nav{
+      width: 100%;
+      padding: 20px 70px;
+      background: #e8f6d8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1{
+      color: #4fa64f;
+      font-size: 28px;
+    }
+
+    nav ul{
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      background: #98d87f;
+      padding: 10px 18px;
+      border-radius: 20px;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover{
+      background: #4fa64f;
+    }
+
+    /* HERO */
+    .hero{
+      width: 100%;
+      min-height: 500px;
+      background: linear-gradient(to right,#e9f7dd,#d6f1bf);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 70px;
+    }
+
+    .hero-text{
+      width: 50%;
+    }
+
+    .hero-text h2{
+      font-size: 60px;
+      color: #1f5c33;
+      margin-bottom: 20px;
+      line-height: 1.1;
+      font-family: Georgia, serif;
+    }
+
+    .hero-text p{
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .hero-text button{
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      background: #244d2c;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero-text button:hover{
+      background: #17341d;
+    }
+
+    .hero-image img{
+      width: 320px;
+    }
+
+    /* SECTION PENTING */
+    .penting{
+      padding: 80px 70px;
+      background: white;
+      text-align: center;
+    }
+
+    .penting h2{
+      font-size: 50px;
+      color: #1f5c33;
+      margin-bottom: 60px;
+      font-family: Georgia, serif;
+    }
+
+    .card-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card{
+      width: 280px;
+      background: #f1f1f1;
+      padding: 30px 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h3{
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .card p{
+      color: #555;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .card-image img{
+      width: 150px;
+    }
+
+    /* FOOTER TEXT */
+    .footer-top{
+      background: #2d3c87;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+    .about-title{
+      background: #2d6a3f;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .about-title h2{
+      font-size: 55px;
+      font-family: Georgia, serif;
+    }
+
+    .about-title p{
+      margin-top: 10px;
+    }
+
+    .about{
+      padding: 60px 70px;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .about-text{
+      width: 50%;
+    }
+
+    .about-text h3{
+      color: #1f5c33;
+      margin-bottom: 15px;
+      font-size: 32px;
+    }
+
+    .about-text p{
+      margin-bottom: 30px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .about-image img{
+      width: 300px;
+    }
+
+    footer{
+      background: #2d3c87;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 900px){
+
+      .hero{
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text{
+        width: 100%;
+      }
+
+      .hero-text h2{
+        font-size: 42px;
+      }
+
+      .hero-image{
+        margin-top: 40px;
+      }
+
+      .about{
+        flex-direction: column;
+      }
+
+      .about-text{
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>RumahResik</h1>
+
+    <ul>
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#sosial">Tentang Kami</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-text">
+      <h2>Mulai Jaga Bumi Dari Langkah Kecil</h2>
+
+      <p>
+        Rumah sehat dimulai dari kebiasaan. Mari bersama-sama menciptakan
+        lingkungan yang asri, nyaman, dan bebas dari penyakit hanya dengan
+        membuang sampah pada tempatnya.
+      </p>
+
+      <button>Pelajari Lebih Lanjut</button>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" alt="Tong Sampah">
+    </div>
+
+  </section>
+
+  <!-- SECTION PENTING -->
+  <section class="penting">
+
+    <h2>Mengapa Ini Sangat Penting?</h2>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h3>Mencegah Penyakit</h3>
+
+        <p>
+          Lingkungan yang kotor dan penuh sampah adalah sarang tumbuhnya
+          penyakit seperti demam berdarah dan diare.
+        </p>
+      </div>
+
+      <div class="card-image">
+        <img src="https://cdn-icons-png.flaticon.com/512/3096/3096673.png" alt="Tempat Sampah">
+      </div>
+
+      <div class="card">
+        <h3>Mencegah Banjir</h3>
+
+        <p>
+          Sampah plastik yang dibuang sembarangan akan menyumbat saluran air
+          sehingga menyebabkan banjir.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT TITLE -->
+  <section class="about-title">
+    <h2>Tentang Kami</h2>
+    <p>Mengenali lebih dekat siapa kami dan tujuan kami peduli.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+
+    <div class="about-text">
+
+      <h3>Siapa Kami?</h3>
+
+      <p>
+        Kami adalah Tim RumahResik, sekelompok pelajar, desainer,
+        dan relawan yang disatukan oleh satu misi: membuat lingkungan
+        sekitar kita bersih, asri, dan sehat untuk generasi masa depan.
+      </p>
+
+      <h3>Tujuan Website Ini</h3>
+
+      <p>
+        Kami percaya bahwa perubahan besar dimulai dari langkah kecil.
+        Website ini dibuat sebagai media pengingat dan edukasi tentang
+        pentingnya membuang sampah pada tempatnya demi masa depan bumi.
+      </p>
+
+    </div>
+
+    <div class="about-image">
+      <img src="https://cdn-icons-png.flaticon.com/512/3096/3096673.png" alt="Tong Sampah">
+    </div>
+
+  </section>
+
+
+<script>
+
+    // tombol saat diklik
+    const tombol = document.querySelector("button");
+
+    tombol.addEventListener("click", function(){
+
+      alert("Terima kasih sudah peduli terhadap kebersihan lingkungan :)");
+
+    });
+
+  </script>
+
+
+
+
+<!-- SOSIAL MEDIA -->
+<section id="sosial" style="padding:40px; text-align:center; background:white;">
+
+  <h2 style="margin-bottom:20px; color:#1f5c33;">
+    Kunjungi Media Sosial Kami
+  </h2>
+
+  <p>
+    <b>Faith</b><br>
+
+    <a href="https://www.instagram.com/faithhsc1?igsh=MThudG1sb29saW81Ng==" target="_blank">
+      Instagram Faith
+    </a>
+  </p>
+
+  <br>
+
+  <p>
+    <b>Izhar</b><br>
+
+    <a href="https://www.instagram.com/izzmhndr?igsh=bGUzNWk5cjc3cXE0" target="_blank">
+      Instagram Izhar
+    </a>
+  </p>
+
+</section>    
+
+  <!-- FOOTER MINI -->
+  <div class="footer-top">
+    © 2026 RumahResik. Faith X PPLG 2 & Izhar X PPLG 1
+  </div>
+
+</body>
+</html>
